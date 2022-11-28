@@ -16,3 +16,12 @@ function sayHello(name){
         return `Hello, ${name}!`;
     }
 }
+
+function isFive(number){
+    if(number == 5){
+        return true;
+    }
+    else{
+        return false
+    }
+}

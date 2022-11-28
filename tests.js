@@ -41,3 +41,25 @@ describe("sayHello", function (){
         expect(sayHello("5")).toBe("Hello, World!");
     });
 })
+
+//Unit test for isFive function
+describe("isFive", function (){
+    it('should be a function', function () {
+        expect(typeof isFive).toBe("function");
+    });
+    it('should a boolean when called', function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return true if 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false if not a number', function () {
+        expect(isFive("Im a string")).toBe(false);
+    });
+    it('should return true for "5"', function () {
+        expect(isFive("5")).toBe(true);
+    });
+    it('should return false if a number that is not 5', function () {
+        expect(isFive(7)).toBe(false);
+    });
+})
