@@ -9,5 +9,10 @@ function helloWorld() {
 // }
 
 function sayHello(name){
-    return `Hello, ${name}!`;
+    if (typeof name !== "string" || name === "" || !isNaN(name)){
+        return "Hello, World!";
+    }
+    else {
+        return `Hello, ${name}!`;
+    }
 }
