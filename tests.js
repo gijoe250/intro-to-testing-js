@@ -63,3 +63,52 @@ describe("isFive", function (){
         expect(isFive(7)).toBe(false);
     });
 })
+
+//Unit test for isEven
+describe("isEven", function (){
+    it('should be a function', function () {
+        expect(typeof isEven).toBe("function");
+    });
+    it('should be a boolean', function () {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should be true when executed with 2', function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should be true when executed with -4', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should be false when executed with 3', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should be false when executed with "banana"', function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should be true when executed with "8', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should be false when executed with Infinity', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should be false when executed with true or false', function () {
+        expect(isEven(true)).toBe(false);
+        expect(isEven(false)).toBe(false);
+    });
+    it('should be false when executed with no input', function () {
+        expect(isEven()).toBe(false);
+    });
+})
+
+//Unit test for isVowel
+describe("isVowel", function (){
+    it('should be a function', function () {
+        expect(typeof isVowel).toBe("function");
+    });
+})
+
+//Unit test for add
+describe("add", function (){
+    it('should be a funciton', function () {
+        expect(typeof add).toBe("function");
+    });
+})

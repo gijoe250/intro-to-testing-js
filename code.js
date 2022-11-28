@@ -25,3 +25,18 @@ function isFive(number){
         return false
     }
 }
+
+function isEven(number){
+    if (number % 2 === 0 && typeof number != "boolean"){
+        return true;
+    }
+    return false;
+}
+
+function isVowel(){
+
+}
+
+function add(){
+
+}
