@@ -104,11 +104,60 @@ describe("isVowel", function (){
     it('should be a function', function () {
         expect(typeof isVowel).toBe("function");
     });
+    it('should return a boolean', function () {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return true with value "a"', function () {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true with value "A"', function () {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false with value "y"', function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false with value 4', function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false with value true or false', function () {
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false with value "banana"', function () {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false with no input', function () {
+        expect(isVowel()).toBe(false);
+    });
 })
 
 //Unit test for add
 describe("add", function (){
     it('should be a funciton', function () {
         expect(typeof add).toBe("function");
+    });
+    it('should return a number', function () {
+        expect(typeof add()).toBe("number");
+    });
+    it('should return 5 with inputs 2 and 3', function () {
+        expect(add(2,3)).toBe(5);
+    });
+    it('should return -12 with inputs -3 and -9', function () {
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it('should return 11 with inputs "5" and 6', function () {
+        expect(add("5", 6)).toBe(11);
+    });
+    it('should return 6 with inputs "-4" and "10"', function () {
+        expect(add("-4", "10")).toBe(6);
+    });
+    it('should return NaN with inputs "banana" and "split"', function () {
+        expect(add("banana", "split")).toBe(NaN);
+    });
+    it('should return NaN with input 2 and "apples"', function () {
+        expect(add(2, "apples")).toBe(NaN);
+    });
+    it('should return Nan with no input', function () {
+        expect(add()).toBe(NaN);
     });
 })
